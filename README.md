@@ -1,5 +1,7 @@
 <p align="center">
   <img src="assets/banner.png" alt="DualLock — two keys, one lock, zero backdoors" width="920">
+  <img width="920" alt="banner" src="https://github.com/user-attachments/assets/cdc5446c-79d1-48e7-9e7b-c2b027ed1266" />
+
 </p>
 
 <p align="center">
@@ -32,7 +34,7 @@ To open it later you need **at least one** of:
 There is no “forgot password” email. That is the point.
 
 <p align="center">
-  <img src="assets/keys.png" alt="Password and master key both protect one file" width="720">
+ <img width="720" alt="keys" src="https://github.com/user-attachments/assets/947401cb-a3ce-4e74-a704-eae6d3624bb7" />
 </p>
 
 ---
@@ -102,7 +104,7 @@ git --version
 ## Install DualLock (once)
 
 ```bash
-git clone https://github.com/YOUR_USER/duallock.git
+git clone https://github.com/kiyoshi-enjo/duallock.git
 cd duallock
 python3 duallock.py --install
 ```
@@ -231,16 +233,81 @@ python3 -c "import hashlib; hashlib.scrypt(b'p', salt=b'0123456789abcdef', n=16,
 No.
 
 **Does DualLock upload anything?**  
-No. Everything stays on your machine.
+No.    Everything stays on your machine.
 
 **Windows?**  
 Not this version. Use Linux or macOS.
 
 **Is the menu required?**  
-No. `encrypt` / `decrypt` work from any directory after install.
+No. `  Only encrypt` / `decrypt` work from any directory after install.
 
 ---
 
 <p align="center">
   <sub>DualLock — two keys · one lock · zero backdoors</sub>
 </p>
+
+---
+# ☕ Support the Project
+
+If **DualLock** is useful to you and you'd like to support its development, you can buy me a coffee! ☕❤️
+
+<a href="https://kiyoshi-portfolio.web.app/coffee.html#home">
+  <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Buy Me a Coffee">
+</a>
+
+Your support helps keep the project maintained and motivates me to build more useful tools for Linux, macOS, and terminal users.
+
+**Other ways to support:**
+
+* ⭐ Star the repository
+* 🐛 Report bugs
+* 💡 Suggest new features
+* 📢 Share `duallock` with other terminal users
+
+Thank you for supporting open-source! ❤️
+
+If you found a bug, have an idea, or need help using `DualLock`, you can use one of these options:
+
+### 🐛 Bug Reports
+
+Please open a GitHub Issue and include:
+
+* OS and shell (e.g. "Ubuntu 24.04, Bash" or "macOS Sonoma, Zsh")
+* `duallock` version
+* File type
+* Command you used
+* Error message
+* Relevant terminal output
+
+### 💡 Feature Requests
+
+Open a feature request on GitHub and describe:
+
+* What you'd like to add
+* Why it would be useful
+* How you think it could work
+
+### 💬 Community Support
+
+For quick questions, discussions, and general help, join the Telegram community:
+
+**Telegram:** <a href="#"> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Ftelegram%2Ftelegram_PNG7.png&f=1&nofb=1&ipt=94caa1474e437b4614819b4876cf20492b83d2b541d1a248cd8f92ed2fb1b429" height="30" width="100" alt="telegram id">
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+### Made with ❤️ for terminal lovers.
+
+**DualLock — two keys, one lock, zero backdoors.**
+
+</div>
