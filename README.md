@@ -1,5 +1,4 @@
 <p align="center">
-  <img src="assets/banner.png" alt="DualLock — two keys, one lock, zero backdoors" width="920">
   <img width="920" alt="banner" src="https://github.com/user-attachments/assets/cdc5446c-79d1-48e7-9e7b-c2b027ed1266" />
 
 </p>
