@@ -1,354 +1,246 @@
-# 🖼️ chitr
+<p align="center">
+  <img src="assets/banner.png" alt="DualLock — two keys, one lock, zero backdoors" width="920">
+</p>
 
-**A smart terminal tool to open images, videos, and audio files — quickly and easily.**
+<p align="center">
+  <strong>Lock any file or folder with two keys.</strong><br>
+  A password you remember. A master key you save once.<br>
+  No account. No cloud. No backdoor.
+</p>
 
-`chitr` is a lightweight media opener for your terminal that automatically detects whether a file is an **image, video, or audio** — by reading its actual content, not just the extension — then opens it using the best available application.
-
-If the preferred application isn't installed or fails to open the file, `chitr` automatically falls back to another compatible application.
-
-**No guessing. No complicated configuration. Just open your media.**
-
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Platform: Linux | macOS](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-blue.svg)
-![Shell: Bash | Zsh | Fish](https://img.shields.io/badge/Shell-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25.svg)
-
----
-
-## ✨ Features
-
-* 🔍 **Automatic File Detection**
-  Detects images, videos, and audio using the `file` command (real content, not just the extension) — falls back to extension matching only if `file` isn't available.
-
-* 🖥️ **GUI & Terminal Support**
-  Choose between graphical applications and terminal-based viewers/players, presented in a clean, colorful selection menu every time — no assumptions carried over from your last choice.
-
-* 🔄 **Smart Fallback System**
-  If one application fails, `chitr` automatically tries another compatible application. Known quirks (like `mpv`'s harmless EOF exit code, or `ffplay`'s multi-Ctrl+C hard-exit code) are recognized so a real stop is never mistaken for a crash.
-
-* 🐚 **Bash, Zsh & Fish Support**
-  `chitr` runs natively in all three shells — each with a dedicated, purpose-built version (not a compatibility shim), since the three shells differ enough (hooks, array semantics) that a single script can't cover all of them.
-
-* 🍎 **macOS Support**
-  Detects macOS automatically, prioritizes native apps (**Preview**, **QuickTime Player**), and uses Homebrew for installing anything else.
-
-* ⌨️ **Shell Integration**
-  With shell integration enabled, you can simply type a media filename and let `chitr` handle the rest. The explicit `chitr <file>` command always works too, regardless of shell hook conflicts.
-
-* 📦 **One-Line Install**
-  A single installer detects which shell(s) you actually have and downloads only the file(s) you need — nothing you won't use.
-
-* 📋 **Application Manager**
-  Use `--list` to see which supported applications are installed and which are missing, across all three media types.
-
-* ⚡ **Lightweight & Fast**
-  No heavy dependencies, no background services.
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/python-3.8%2B-51d1ff?style=for-the-badge">
+  <img alt="OS" src="https://img.shields.io/badge/linux%20%7C%20macOS-0b1220?style=for-the-badge">
+  <img alt="Deps" src="https://img.shields.io/badge/dependencies-none-82c91e?style=for-the-badge">
+</p>
 
 ---
 
-# 🚀 Installation
+## What is DualLock?
 
-## Quick Install (recommended)
+DualLock is a small terminal tool. You give it a file or a folder. It locks it.
 
-This single command detects which shell(s) are installed on your system (Bash, Zsh, and/or Fish) and downloads **only** the matching file(s) — not all three:
+To open it later you need **at least one** of:
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/kiyoshi-enjo/chitr/main/install.sh | bash
-```
-
-It will:
-- Detect Bash / Zsh / Fish on your system
-- Download only the relevant script(s) to your home directory
-- Wire them into the correct shell config (`.bashrc`, `.zshrc`, or `config.fish`)
-- Make them executable
-
-Open a new terminal and run:
-
-```bash
-chitr --setup
-```
-
-This installs a solid default toolkit (`jp2a`, `chafa`, `cacaview` for images; `mpv` for video/audio).
-
----
-
-## Manual Install (git clone)
-
-If you'd rather inspect the code first or don't want to pipe `curl` into `bash`:
-
-```bash
-git clone https://github.com/kiyoshi-enjo/chitr.git
-cd chitr
-chmod +x install.sh
-./install.sh
-```
-
-`install.sh` runs the same shell-detection logic locally instead of over the network — same result, no download step.
-
-### Installing Git, if you don't have it
-
-| Distro | Command |
+| You have | You can open it |
 |---|---|
-| Ubuntu / Debian / Mint | `sudo apt install git -y` |
-| Fedora / RHEL / Rocky / Alma | `sudo dnf install git -y` |
-| Arch / Manjaro / EndeavourOS | `sudo pacman -Sy git` |
-| openSUSE | `sudo zypper install git` |
-| Alpine | `sudo apk add git` |
-| macOS | `brew install git` |
+| Password | Yes |
+| Master key | Yes (if you lost the password) |
+| Both | Yes — even after too many wrong passwords |
+| Neither | **Nobody can.** Not even you. |
+
+There is no “forgot password” email. That is the point.
+
+<p align="center">
+  <img src="assets/keys.png" alt="Password and master key both protect one file" width="720">
+</p>
 
 ---
 
-## macOS Notes
+## What you need (download this first)
 
-macOS ships an old default Bash (3.2) that `chitr` can't run on. If you use Bash on Mac:
+DualLock itself needs **no pip packages**. You only download **Python 3** (and `git` to clone).
+
+Pick your system. One command:
+
+<details>
+<summary><strong>Ubuntu / Debian / Kali / Mint / Pop!_OS</strong></summary>
 
 ```bash
-brew install bash
+sudo apt update
+sudo apt install -y python3 git
 ```
 
-If you use Zsh (the default shell on modern macOS), no extra step is needed — `chitr`'s Zsh version works out of the box once installed.
+</details>
 
-🎉 **That's it! chitr is ready to use.**
+<details>
+<summary><strong>Fedora / RHEL / CentOS</strong></summary>
+
+```bash
+sudo dnf install -y python3 git
+```
+
+</details>
+
+<details>
+<summary><strong>Arch / Manjaro</strong></summary>
+
+```bash
+sudo pacman -S --needed python git
+```
+
+</details>
+
+<details>
+<summary><strong>openSUSE</strong></summary>
+
+```bash
+sudo zypper install -y python3 git
+```
+
+</details>
+
+<details>
+<summary><strong>macOS (Homebrew)</strong></summary>
+
+```bash
+# if brew is missing:  https://brew.sh
+brew install python git
+```
+
+</details>
+
+Check:
+
+```bash
+python3 --version    # 3.8 or newer
+git --version
+```
 
 ---
 
-## 📦 Usage
-
-### Open a File
+## Install DualLock (once)
 
 ```bash
-chitr photo.jpg
-chitr video.mp4
-chitr song.mp3
+git clone https://github.com/YOUR_USER/duallock.git
+cd duallock
+python3 duallock.py --install
 ```
 
-Or, with shell integration, just type the filename directly:
-
-```bash
-photo.jpg
-video.mp4
-song.mp3
-```
-
-`chitr` automatically determines the file type and shows a menu:
-
-```
-🖼  Image detected: photo.jpg
-
-╭──────────────────────────────────╮
-│  1) GUI  =  In App                │
-│  2) CLI  =  In Trmnl              │
-╰──────────────────────────────────╯
-Choose [1/2]:
-```
-
-### Available Commands
-
-```bash
-chitr --setup
-```
-Install recommended default applications.
-
-```bash
-chitr --list
-```
-Show installed and missing applications, by category.
-
-```bash
-chitr --help
-```
-Show the help menu.
-
----
-
-## ⌨️ Shell Integration
-
-Once installed, you can open a media file directly by typing its filename — no `chitr` prefix needed:
-
-```bash
-$ photo.jpg
-```
-
-This works in **Bash, Zsh, and Fish**. A couple of notes depending on your shell:
-
-- **Bash / Zsh:** if something else on your system (like the `command-not-found` package on Debian/Ubuntu/Kali) also hooks into unknown commands, `chitr` automatically re-asserts itself before every prompt, so this keeps working regardless of load order.
-- **Fish:** typing a bare filename works, but fish will also print its own harmless "command not found" message afterward — this is a fish design limitation (its hook doesn't fully suppress the default message), not a chitr bug. It only affects the bare-filename shortcut.
-
-If you ever run into any issue with the bare-filename shortcut in any shell, `chitr <file>` always works as a guaranteed fallback.
-
----
-
-# 🛠️ Supported Applications
-
-## 🖼️ Images
-
-**GUI:** `feh` `geeqie` `eog` `gthumb` `nomacs` `gwenview` `qview` `shotwell` `xnviewmp` `gimp` *(+ `Preview` on macOS)*
-
-**Terminal / CLI:** `jp2a` `chafa` `cacaview` `catimg` `img2sixel` `viu` `timg` `w3m`
-
-## 🎬 Videos
-
-**GUI:** `vlc` `mpv` `celluloid` `totem` `smplayer` `parole` `kaffeine` `mplayer` *(+ `QuickTime Player` on macOS)*
-
-**Terminal / CLI:** `mpv` `mplayer` `vlc` *(rendered in-terminal via `tct`/`caca` output)*
-
-## 🎵 Audio
-
-**GUI:** `vlc` `audacious` `rhythmbox` `clementine` `lollypop` `elisa` `deadbeef` *(+ `QuickTime Player` on macOS)*
-
-**Terminal / CLI:** `mpv` `mplayer` `mpg123` `ffplay`
-
-Only apps that are actually installed are ever shown or used — everything else is skipped silently.
-
----
-
-# 📋 Check Available Apps
-
-```bash
-chitr --list
-```
-
-Example:
+You should see **successfully installed** and:
 
 ```text
-Image — GUI:
-  ✔ feh
-  ✘ geeqie
-  ✔ gthumb
-  ...
+encrypt  <file>
+decrypt  <file>
+decrypt  --master <file>
+```
 
-Image — CLI:
-  ✔ jp2a
-  ✔ chafa
-  ✔ cacaview
-  ...
+The installer copies DualLock to `~/.local/bin` and then **deletes** this folder’s `duallock.py`.
+After that, `encrypt` / `decrypt` work from any directory.
 
-Video — CLI:
-  ✔ mpv
-  ✘ mplayer
-  ✘ vlc
+If the shell says `command not found`, add this to `~/.bashrc` (Linux) or `~/.zshrc` (Mac), then open a new terminal:
 
-Audio — CLI:
-  ✔ mpv
-  ✘ mpg123
-  ✔ ffplay
+```bash
+export PATH="$HOME/.local/bin:$PATH"
 ```
 
 ---
 
-# 🧠 How It Works
+## Commands
 
 ```text
-                 ┌──────────────┐
-                 │   chitr FILE │
-                 └──────┬───────┘
-                        │
-                        ▼
-               ┌─────────────────┐
-               │ Detect File Type│
-               │ (real MIME type)│
-               └────────┬────────┘
-                        │
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
-       🖼️ Image       🎬 Video      🎵 Audio
-          │             │             │
-          ▼             ▼             ▼
-      Find Apps      Find Apps      Find Apps
-      (installed      (installed     (installed
-       only)           only)          only)
-          │             │             │
-          └─────────────┼─────────────┘
-                        ▼
-              1 found → open directly
-              2+ found → ask which one
-              0 found → suggest install
-                        │
-                        ▼
-                 App Fails?
-                   /       \
-                 No         Yes (real failure,
-                 │           not a user stop)
-                 ▼           │
-                Done         ▼
-                        Try next installed app
+encrypt  <file>
+decrypt  <file>
+decrypt  --master <file>
 ```
 
-Each shell (Bash, Zsh, Fish) runs its own dedicated implementation of this flow — the logic is equivalent, but hooks, arrays, and syntax are native to each shell rather than emulated.
+One name. Same name, same extension. The original is **replaced**.
+
+`<file>` can also be a **folder**.
+
+Menu (optional):
+
+```bash
+duallock
+```
 
 ---
 
-# 🔮 Coming Soon
+## Examples
 
-* 🧩 Plugin system for new file types
+```bash
+encrypt notes.txt      # notes.txt is now locked (plaintext is gone)
+decrypt notes.txt      # notes.txt is back
+```
 
-* 🕘 Recently opened file history
+```bash
+encrypt secret.pdf
+decrypt secret.pdf
+```
 
-* 🎨 Custom application priority
+```bash
+encrypt MyFolder       # folder becomes one locked file named MyFolder
+decrypt MyFolder       # folder comes back
+```
 
-* 🧪 Better error reporting and diagnostics
+You will be asked for a password, then shown a **master key one time**. Copy it. Type `SAVED`.
 
----
+### Lost the password, still have the master key
 
-# ☕ Support the Project
+```bash
+decrypt --master secret.pdf
+```
 
-If **chitr** is useful to you and you'd like to support its development, you can buy me a coffee! ☕❤️
+Paste is **visible**. In the terminal use `Ctrl+Shift+V` (or `Shift+Insert`).
 
-<a href="https://ko-fi.com/YOUR_USERNAME">
-  <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Buy Me a Coffee">
-</a>
+### Optional hint
 
-Your support helps keep the project maintained and motivates me to build more useful tools for Linux, macOS, and terminal users.
+Hint is **plain text** inside the locked file. Never put the real password there.
 
-**Other ways to support:**
-
-* ⭐ Star the repository
-* 🐛 Report bugs
-* 💡 Suggest new features
-* 📢 Share `chitr` with other terminal users
-
-Thank you for supporting open-source! ❤️
-
-If you found a bug, have an idea, or need help using `chitr`, you can use one of these options:
-
-### 🐛 Bug Reports
-
-Please open a GitHub Issue and include:
-
-* OS and shell (e.g. "Ubuntu 24.04, Bash" or "macOS Sonoma, Zsh")
-* `chitr` version
-* File type
-* Command you used
-* Error message
-* Relevant terminal output
-
-### 💡 Feature Requests
-
-Open a feature request on GitHub and describe:
-
-* What you'd like to add
-* Why it would be useful
-* How you think it could work
-
-### 💬 Community Support
-
-For quick questions, discussions, and general help, join the Telegram community:
-
-**Telegram:** <a href="https://t.me/chitr_bykiyoshi"> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Ftelegram%2Ftelegram_PNG7.png&f=1&nofb=1&ipt=94caa1474e437b4614819b4876cf20492b83d2b541d1a248cd8f92ed2fb1b429" height="30" width="100" alt="telegram id">
+```bash
+encrypt --hint "office notebook" diary.txt
+```
 
 ---
 
-# 📄 License
+## How it works (simple)
 
-This project is licensed under the **MIT License**.
+```text
+  PASSWORD  ──►  wraps the master key   (slow on purpose — scrypt)
+  MASTER KEY ──►  locks the real data    (110 random characters)
 
-See the [`LICENSE`](LICENSE) file for details.
+  result → the same file, now locked
+```
+
+1. DualLock creates a long random **master key**.
+2. Your data is locked with that key.
+3. Your **password** only protects the master key.
+4. The master key is printed **once**. Save it in a password manager — not next to the locked file.
 
 ---
 
-<div align="center">
+## Good habits
 
-### Made with ❤️ for terminal lovers.
+- Strong password (12+ characters).
+- Master key in a password manager, **not** in the same folder as the `.dlk`.
+- Hint can be a reminder (“blue notebook”), never the password.
+- After 6 wrong passwords this tool also asks for the master key.
 
-**chitr — Just type it. We'll open it.**
+---
 
-</div>
+## Requirements
+
+| Need | Download |
+|---|---|
+| OS | Linux or macOS |
+| `python3` 3.8+ | see **What you need** above (`apt` / `dnf` / `pacman` / `brew`) |
+| `git` | same — used only to clone this repo |
+| pip / venv / extra libraries | **not needed** |
+
+Mac extra check (optional):
+
+```bash
+python3 -c "import hashlib; hashlib.scrypt(b'p', salt=b'0123456789abcdef', n=16, r=8, p=1, dklen=32); print('ok')"
+```
+
+---
+
+## FAQ
+
+**Can I recover data if I lose both keys?**  
+No.
+
+**Does DualLock upload anything?**  
+No. Everything stays on your machine.
+
+**Windows?**  
+Not this version. Use Linux or macOS.
+
+**Is the menu required?**  
+No. `encrypt` / `decrypt` work from any directory after install.
+
+---
+
+<p align="center">
+  <sub>DualLock — two keys · one lock · zero backdoors</sub>
+</p>
