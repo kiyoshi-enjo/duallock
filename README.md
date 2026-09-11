@@ -4,8 +4,10 @@
 </p>
 
 <p align="center">
-  <strong>Lock any file or folder with two keys.</strong><br>
-  A password you remember. A master key you save once.<br>
+  <strong>Lock any file or folder with two keys.</strong>
+
+  A password you remember. A master key you save once.
+
   No account. No cloud. No backdoor.
 </p>
 
@@ -97,6 +99,17 @@ Check:
 python3 --version    # 3.8 or newer
 git --version
 ```
+
+## Download
+
+Pick your platform:
+
+<p align="center">
+  <a href="https://duallock-app.web.app/play.html" title="Android — Google Play page"><img src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" width="56" height="56"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/ios.html" title="Apple iOS — App Store page (coming soon)"><img src="https://cdn.simpleicons.org/apple/0A84FF" alt="Apple iOS" width="56" height="56"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/mac.html" title="macOS — installation guide"><img src="https://cdn.simpleicons.org/macos/6E6E73" alt="macOS" width="56" height="56"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/linux.html" title="Linux — installation guide"><img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" width="56" height="56"></a>
+</p>
 
 ---
 
