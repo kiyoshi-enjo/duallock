@@ -102,13 +102,13 @@ git --version
 
 ## Download
 
-Pick your platform:
+**Pick your platform:**
 
 <p align="center">
-  <a href="https://duallock-app.web.app/play.html" title="Android — Google Play page"><img src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" width="56" height="56"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://duallock-app.web.app/ios.html" title="Apple iOS — App Store page (coming soon)"><img src="https://cdn.simpleicons.org/apple/0A84FF" alt="Apple iOS" width="56" height="56"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://duallock-app.web.app/mac.html" title="macOS — installation guide"><img src="https://cdn.simpleicons.org/macos/6E6E73" alt="macOS" width="56" height="56"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://duallock-app.web.app/linux.html" title="Linux — installation guide"><img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" width="56" height="56"></a>
+  <a href="https://duallock-app.web.app/play.html" title="Android — Google Play page"><img src="https://img.shields.io/badge/-Android-000000?style=flat-square&amp;logo=android&amp;logoColor=white" alt="Android" height="50" width="150"></a>&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/ios.html" title="Apple iOS — App Store page (coming soon)"><img src="https://img.shields.io/badge/-Apple-000000?style=flat-square&amp;logo=apple&amp;logoColor=white" alt="Apple iOS" height="50" width="150"></a>&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/mac.html" title="macOS — installation guide"><img src="https://img.shields.io/badge/-macOS-000000?style=flat-square&amp;logo=macos&amp;logoColor=white" alt="macOS" height="50" width="150"></a>&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/linux.html" title="Linux — installation guide"><img src="https://img.shields.io/badge/-Linux-000000?style=flat-square&amp;logo=linux&amp;logoColor=white" alt="Linux" height="50" width="150"></a>
 </p>
 
 ---
@@ -304,7 +304,7 @@ Open a feature request on GitHub and describe:
 
 For quick questions, discussions, and general help, join the Telegram community:
 
-**Telegram:** <a href="#"> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Ftelegram%2Ftelegram_PNG7.png&f=1&nofb=1&ipt=94caa1474e437b4614819b4876cf20492b83d2b541d1a248cd8f92ed2fb1b429" height="30" width="100" alt="telegram id">
+**Telegram:** <a href="https://t.me/duallock_app"> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Ftelegram%2Ftelegram_PNG7.png&f=1&nofb=1&ipt=94caa1474e437b4614819b4876cf20492b83d2b541d1a248cd8f92ed2fb1b429" height="30" width="100" alt="telegram id">
 
 ---
 
