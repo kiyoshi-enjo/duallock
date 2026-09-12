@@ -105,9 +105,9 @@ git --version
 **Pick your platform:**
 
 <p align="center">
-  <a href="https://duallock-app.web.app/play.html" title="Android — Google Play page"><img src="https://img.shields.io/badge/-Android-000000?style=flat-square&amp;logo=android&amp;logoColor=white" alt="Android" height="50" width="150"></a>&nbsp;&nbsp;
-  <a href="https://duallock-app.web.app/ios.html" title="Apple iOS — App Store page (coming soon)"><img src="https://img.shields.io/badge/-Apple-000000?style=flat-square&amp;logo=apple&amp;logoColor=white" alt="Apple iOS" height="50" width="150"></a>&nbsp;&nbsp;
-  <a href="https://duallock-app.web.app/mac.html" title="macOS — installation guide"><img src="https://img.shields.io/badge/-macOS-000000?style=flat-square&amp;logo=macos&amp;logoColor=white" alt="macOS" height="50" width="150"></a>&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/play.html" title="Android — Google Play page"><img src="https://img.shields.io/badge/-Android-000000?style=flat-square&amp;logo=android&amp;logoColor=white" alt="Android" height="50" width="150"></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/ios.html" title="Apple iOS — App Store page (coming soon)"><img src="https://img.shields.io/badge/-Apple-000000?style=flat-square&amp;logo=apple&amp;logoColor=white" alt="Apple iOS" height="50" width="150"></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://duallock-app.web.app/mac.html" title="macOS — installation guide"><img src="https://img.shields.io/badge/-macOS-000000?style=flat-square&amp;logo=macos&amp;logoColor=white" alt="macOS" height="50" width="150"></a>&nbsp;&nbsp;&nbsp;
   <a href="https://duallock-app.web.app/linux.html" title="Linux — installation guide"><img src="https://img.shields.io/badge/-Linux-000000?style=flat-square&amp;logo=linux&amp;logoColor=white" alt="Linux" height="50" width="150"></a>
 </p>
 
