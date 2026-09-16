@@ -1,3 +1,15 @@
+<div align="center">
+
+<a href="https://duallock-app.web.app/index.html">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B192C,50:0F2438,100:0B192C&height=120&section=header&text=Go%20to%20Main%20Webpage&fontSize=32&fontColor=00E5FF&fontAlignY=40&animation=twinkling&desc=DualLock%20by%20Trinetr&descSize=14&descColor=00B3DC&descAlignY=62" width="100%" alt="Go to Main Webpage"/>
+
+</a>
+
+</div>
+
+
+
 <p align="center">
   <img width="920" alt="banner" src="https://github.com/user-attachments/assets/cdc5446c-79d1-48e7-9e7b-c2b027ed1266" />
 
